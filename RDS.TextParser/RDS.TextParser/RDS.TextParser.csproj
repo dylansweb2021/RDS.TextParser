@@ -16,6 +16,7 @@
     <Version>1.1.0</Version>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
     <PackageProjectUrl>https://textparser.relevantdataservices.com/license.txt</PackageProjectUrl>
+    <PackageTags>TextParser, Parser, Extract, UnstructuredText, Parse, HTML, Scraper, Scraping, Scrape</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
