@@ -73,15 +73,15 @@ namespace RDS.TextParser
         {
             ExceptionMessage = string.Empty;
 
+            if (string.IsNullOrWhiteSpace(source)) { return false; }
+
             try
             {
                 if (!config.LoadConfigFromString(configuration)) { return false; }
 
-                if (string.IsNullOrEmpty(source)) { return false; }
-
                 result = GenerateResult<T>(config, source, result);
 
-                return true;
+                return result != null;
             }
             catch (Exception err)
             {
@@ -95,8 +95,8 @@ namespace RDS.TextParser
         public Dictionary<string, object> GetResultDictionary(string tokens, string source)
         {
             return !config.LoadConfigFromString(tokens)
-           ? new Dictionary<string, object>(0)
-           : GetResultDictionaryUsingLoadedTokens(source);
+                ? new Dictionary<string, object>(0)
+                : GetResultDictionaryUsingLoadedTokens(source);
         }
 
         private Table GetTableResult(string key, TableToken token, string source)
@@ -136,10 +136,10 @@ namespace RDS.TextParser
 
             Dictionary<string, object> result;
 
+            if (string.IsNullOrWhiteSpace(source)) { return new Dictionary<string, object>(0); }
+
             try
             {
-                if (string.IsNullOrEmpty(source)) { return new Dictionary<string, object>(0); }
-
                 result = new Dictionary<string, object>(config.Tokens.Count);
 
                 var i = 0;
@@ -152,7 +152,7 @@ namespace RDS.TextParser
 
                     if (handle.Equals(Constants.handle_ListToken))
                     {
-
+                        // TODO: implement/handle this
                     }
                     else if (handle.Equals(Constants.handle_TypeListToken))
                     {
@@ -273,6 +273,7 @@ namespace RDS.TextParser
             else
             {
                 GatherZones(token, destinationHTML, ref result);
+
                 CleanString(ref result);
             }
 

@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Dylan Currier - Relevant Data Services LLC</Authors>
+    <Copyright>Copyright (c) 2021 Dylan Currier</Copyright>
+    <Company>Relevant Data Services LLC</Company>
   </PropertyGroup>
 
   <ItemGroup>
