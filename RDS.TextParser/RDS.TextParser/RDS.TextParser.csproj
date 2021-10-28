@@ -5,6 +5,15 @@
     <Authors>Dylan Currier - Relevant Data Services LLC</Authors>
     <Copyright>Copyright (c) 2021 Dylan Currier</Copyright>
     <Company>Relevant Data Services LLC</Company>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>A .NET Core Library for extracting structured data from unstructured text.</Description>
+    <RepositoryUrl>https://github.com/dylansweb2021/RDS.TextParser</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
