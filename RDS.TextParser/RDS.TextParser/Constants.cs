@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RDS.TextParser.Tokens;
+using System;
 
 namespace RDS.TextParser
 {
@@ -20,6 +21,14 @@ namespace RDS.TextParser
         public static readonly Type t_short = typeof(short);
         public static readonly Type t_ushort = typeof(ushort);
         public static readonly Type t_DateTime = typeof(DateTime);
+
+        public static readonly RuntimeTypeHandle handle_Token = typeof(Token).TypeHandle;
+        public static readonly RuntimeTypeHandle handle_ConditionalToken = typeof(ConditionalToken).TypeHandle;
+        public static readonly RuntimeTypeHandle handle_JSONToken = typeof(JSONToken).TypeHandle;
+        public static readonly RuntimeTypeHandle handle_TypeToken = typeof(Type_Token).TypeHandle;
+        public static readonly RuntimeTypeHandle handle_ListToken = typeof(ListToken).TypeHandle;
+        public static readonly RuntimeTypeHandle handle_TypeListToken = typeof(TypeListToken).TypeHandle;
+        public static readonly RuntimeTypeHandle handle_TableToken = typeof(TableToken).TypeHandle;
 
         public static readonly char c_tab = char.Parse("\t");
         public static readonly char c_newln = char.Parse("\n");

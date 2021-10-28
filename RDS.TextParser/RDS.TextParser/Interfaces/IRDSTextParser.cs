@@ -2,7 +2,7 @@
 
 namespace RDS.TextParser.Interfaces
 {
-    public interface IRDSParser
+    public interface IRDSTextParser
     {
         Dictionary<string, object> GetResultDictionary(string tokens, string source);
     }

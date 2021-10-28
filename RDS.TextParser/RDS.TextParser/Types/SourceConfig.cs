@@ -12,6 +12,7 @@ namespace RDS.TextParser.Types
         public Dictionary<string, Token> Tokens = new Dictionary<string, Token>();
 
         private string[] configPaths;
+
         public string[] ConfigPaths
         {
             get => configPaths;
