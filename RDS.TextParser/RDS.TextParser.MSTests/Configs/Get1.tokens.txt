@@ -1,0 +1,22 @@
+﻿<Tokens>
+	<Token kind="Text" name="InstitutionalOwnership">
+			<Section>
+					<Begin><![CDATA[<table class="institutional-holdings]]></Begin>
+					<End><![CDATA[</tbody></table></div>]]></End>
+			</Section>
+			<Section>
+					<Begin><![CDATA[>Institutional Ownership<]]></Begin>
+					<End><![CDATA[</tr>]]></End>
+			</Section>
+			<Section>
+					<Begin><![CDATA[<td]]></Begin>
+					<End><![CDATA[td>]]></End>
+			</Section>
+			<Section>
+					<Begin><![CDATA[>]]></Begin>
+					<End><![CDATA[<]]></End>
+			</Section>
+			<Trim/>
+			<HtmlDecode/>
+	</Token>
+</Tokens>

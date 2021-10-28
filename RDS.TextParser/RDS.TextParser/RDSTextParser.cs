@@ -19,6 +19,56 @@ namespace RDS.TextParser
 
         public string ExceptionMessage = string.Empty;
 
+        public object[][] GetResult(string configuration, string source)
+        {
+            ExceptionMessage = string.Empty;
+
+            object[][] result;
+
+            if (string.IsNullOrWhiteSpace(source)) { return Array.Empty<object[]>(); }
+
+            try
+            {
+                if (!config.LoadConfigFromString(configuration)) { return Array.Empty<object[]>(); }
+
+                result = new object[config.Tokens.Count][];
+
+                var rows = new List<object[]>();
+
+                var i = 0;
+
+                foreach (var pair in config.Tokens)
+                {
+                    var handle = pair.Value.GetType().TypeHandle;
+
+                    if (handle.Equals(Constants.handle_ListToken))
+                    {
+                        // TODO: handle ..
+                    }
+                    else if (handle.Equals(Constants.handle_TableToken))
+                    {
+                        result[i] = new object[] { GetTableResult(pair.Key, pair.Value as TableToken, source) };
+                    }
+                    else if (handle.Equals(Constants.handle_TypeListToken))
+                    {
+                        // TODO: handle ..
+                    }
+                    else
+                    {
+                        result[i] = new object[] { pair.Key, GetItem(pair.Value, source) };
+                    }
+
+                    i++;
+                }
+            }
+            catch (Exception)
+            {
+                result = Array.Empty<object[]>();
+            }
+
+            return result;
+        }
+
         public bool GetResult<T>(string configuration, string source, ref T result)
         {
             ExceptionMessage = string.Empty;

@@ -1,0 +1,19 @@
+﻿<div class="institutional-holdings__data"><div class="institutional-holdings__table-container">
+<table class="institutional-holdings__table" role="table">
+<thead class="institutional-holdings__table-headings">
+<tr class="institutional-holdings__header" role="row">
+<th scope="column" role="columnheader" class="institutional-holdings__txtcolumnheader" data-column="label">
+<span class="institutional-holdings__columnheader-text">Label<i></i></span>
+</th><th scope="column" role="columnheader" class="institutional-holdings__txtcolumnheader" data-column="value">
+<span class="institutional-holdings__columnheader-text">Value<i></i></span>
+</th></tr></thead><tbody class="institutional-holdings__body">
+<tr class="institutional-holdings__row" role="row">
+<td scope="row" role="cell" class="institutional-holdings__cell institutional-holdings__cell--heading">Institutional Ownership</td>
+<td scope="row" role="cell" class="institutional-holdings__cell institutional-holdings__cell--heading">34.63 %</td></tr>
+<tr class="institutional-holdings__row" role="row">
+<td scope="row" role="cell" class="institutional-holdings__cell institutional-holdings__cell--heading">Total Shares Outstanding (millions)</td>
+<td scope="row" role="cell" class="institutional-holdings__cell institutional-holdings__cell--heading">121</td></tr>
+<tr class="institutional-holdings__row" role="row">
+<td scope="row" role="cell" class="institutional-holdings__cell institutional-holdings__cell--heading">Total Value of Holdings (millions)</td>
+<td scope="row" role="cell" class="institutional-holdings__cell institutional-holdings__cell--heading">$1,695</td></tr></tbody>
+</table></div>
